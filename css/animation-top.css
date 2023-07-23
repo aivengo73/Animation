@@ -1,0 +1,36 @@
+.animation-top {
+	width: 98%;
+	height: 40px;
+	border: 2px solid blue;
+	background-color: #f8f8f5;
+	position: absolute;
+	top: 250px;
+	left: 1%;
+}
+
+.indicator {
+	width: 100px;
+	height: 100%;
+	background-color: rgb(15, 224, 103);
+	animation-duration: 4s;
+	animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	animation-name: slide_in;
+	animation-fill-mode: forwards;
+
+}
+
+@keyframes slide_in {
+	from {
+		width: 100px;
+	}
+	to {
+		width: 90%;
+	}
+}
+
+/* //==== в задании не предусмотрена остановка по hover, но я добавил === */
+
+.indicator:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}

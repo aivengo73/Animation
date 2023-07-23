@@ -1,0 +1,64 @@
+.animation-box {
+	position: absolute;
+	top: 550px;
+	left: 43%;
+	width: 300px;
+	height: 300px;
+	border: 2px solid #000;
+	overflow: hidden;
+	background-color: coral;
+	
+}
+
+.ball {
+	width: 30px;
+	height: 30px;
+	border: 3px dotted #000;
+	border-radius: 50%;
+	background-color: rgb(73, 73, 235);
+}
+
+.ball {
+	animation: slide-in 3s ease-in infinite;
+	animation-direction: normal;
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translate(-5px, -5px) scale(0.8);
+		
+	}
+
+	10% {
+		transform: translate(80px, 270px) rotate(-360deg) scale(1.0, 0.9);
+		animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+	}
+
+	20% {
+		transform: translate(140px, 230px) rotate(-180deg);
+		animation-timing-function: linear;
+	}
+
+	55% {
+		transform: translate(190px, 265px) rotate(90deg);
+		animation-timing-function: ease-out;
+	}
+
+	60% {
+		transform: translate(210px, 245px);
+		animation-timing-function: linear;
+	}
+
+	80% {
+		transform: translate(245px, 265px) rotate(45deg);
+	}
+
+	90% {
+		transform: translate(265px, 265px);
+	}
+
+	100% {
+		transform: translate(265px, 265px);
+		
+	}
+}
